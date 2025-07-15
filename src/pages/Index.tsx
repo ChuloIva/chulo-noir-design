@@ -3,6 +3,14 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Mail, Github, Linkedin, Twitter } from "lucide-react";
 
 const Index = () => {
+  const research = [
+    {
+      title: "Representation Engineering - Mental Health Interventions",
+      description: "Explores representation engineering for mental health insights using fine-tuned Mistral 7B on depressive datasets. Features contrastive PCA vector extraction, 30+ cognitive pairs testing, and LLM-as-judge evaluation. Discovers social connection as most effective intervention, validating intrinsic vs extrinsic motivation theories.",
+      url: "https://github.com/ChuloIva/Representation-engineering---mental-health-experiments"
+    }
+  ];
+
   const projects = [
     {
       title: "MyMind - Therapeutic AI Application",
@@ -33,11 +41,6 @@ const Index = () => {
       title: "Sentiment Analysis - European Media Dashboard",
       description: "Comprehensive sentiment analysis project featuring European media freedom visualization, Croatian media trust analysis, and Reddit comment sentiment classification. Includes interactive dashboards with Google search trends, device usage analytics, and Supreme Court decision impact analysis with 78.5% negative sentiment detection.",
       url: "https://github.com/ChuloIva/Sentiment-analysis"
-    },
-    {
-      title: "Representation Engineering - Mental Health Interventions",
-      description: "Explores representation engineering for mental health insights using fine-tuned Mistral 7B on depressive datasets. Features contrastive PCA vector extraction, 30+ cognitive pairs testing, and LLM-as-judge evaluation. Discovers social connection as most effective intervention, validating intrinsic vs extrinsic motivation theories.",
-      url: "https://github.com/ChuloIva/Representation-engineering---mental-health-experiments"
     }
   ];
 
@@ -144,6 +147,34 @@ const Index = () => {
               </div>
             </CardContent>
           </Card>
+        </section>
+
+        {/* Research Section */}
+        <section className="mb-16 animate-fade-in">
+          <h3 className="text-2xl font-semibold mb-8 text-primary">Research</h3>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {research.map((item, index) => (
+              <Card key={index} className="bg-gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300 group animate-scale-in">
+                <CardContent className="p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-primary group-hover:text-accent transition-colors duration-200">
+                    {item.title}
+                  </h4>
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                    {item.description}
+                  </p>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-200 font-medium"
+                  >
+                    View on GitHub
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </section>
 
         {/* Projects Grid */}
