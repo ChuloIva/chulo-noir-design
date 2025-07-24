@@ -8,6 +8,11 @@ const Index = () => {
       title: "Representation Engineering - Mental Health Interventions",
       description: "Explores representation engineering for mental health insights using fine-tuned Mistral 7B on depressive datasets. Features contrastive PCA vector extraction, 30+ cognitive pairs testing, and LLM-as-judge evaluation. Discovers social connection as most effective intervention, validating intrinsic vs extrinsic motivation theories.",
       url: "https://github.com/ChuloIva/Representation-engineering---mental-health-experiments"
+    },
+    {
+      title: "HypotheSAEs - Cognitive Pattern Discovery in Depression",
+      description: "A specialized neural network research framework that automatically discovers interpretable cognitive markers of depression from Reddit text data. Trains Sparse Autoencoders on depression-related posts versus control subreddits to learn semantic feature representations, applies Lasso regression to identify the most predictive neurons for depression classification, then uses LLM interpretation to generate human-readable hypotheses about cognitive patterns. Modified with custom prompts focusing on cognitive processes like metacognitive awareness, reasoning styles, mental flexibility, and information processing patterns rather than topic content. Features interactive dashboard for exploring neuron activations and provides complete reproducible pipeline for mental health linguistic pattern analysis.",
+      url: "https://github.com/ChuloIva/HypotheSAEs-mental-health"
     }
   ];
 
