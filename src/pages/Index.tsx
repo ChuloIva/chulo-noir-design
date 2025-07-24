@@ -11,7 +11,7 @@ const Index = () => {
     },
     {
       title: "HypotheSAEs - Cognitive Pattern Discovery in Depression",
-      description: "A specialized neural network research framework that automatically discovers interpretable cognitive markers of depression from Reddit text data. Trains Sparse Autoencoders on depression-related posts versus control subreddits to learn semantic feature representations, applies Lasso regression to identify the most predictive neurons for depression classification, then uses LLM interpretation to generate human-readable hypotheses about cognitive patterns. Modified with custom prompts focusing on cognitive processes like metacognitive awareness, reasoning styles, mental flexibility, and information processing patterns rather than topic content. Features interactive dashboard for exploring neuron activations and provides complete reproducible pipeline for mental health linguistic pattern analysis.",
+      description: "A specialized neural network framework that automatically discovers interpretable cognitive markers of depression from Reddit text data. Trains Sparse Autoencoders on depression posts vs control subreddits, applies Lasso regression for predictive neuron identification, then uses LLM interpretation for human-readable cognitive pattern hypotheses. Features interactive dashboard and complete reproducible pipeline.",
       url: "https://github.com/ChuloIva/HypotheSAEs-mental-health"
     }
   ];
