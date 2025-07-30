@@ -13,6 +13,11 @@ const Index = () => {
       title: "HypotheSAEs - Cognitive Pattern Discovery in Depression",
       description: "A specialized neural network framework that automatically discovers interpretable cognitive markers of depression from Reddit text data. Trains Sparse Autoencoders on depression posts vs control subreddits, applies Lasso regression for predictive neuron identification, then uses LLM interpretation for human-readable cognitive pattern hypotheses. Features interactive dashboard and complete reproducible pipeline.",
       url: "https://github.com/ChuloIva/HypotheSAEs-mental-health"
+    },
+    {
+      title: "COT-Steering - Cognitive Pattern Manipulation in Thinking LLMs",
+      description: "An adaptation of existing framework for emotional and cognitive contexts. It steers an LLM's thinking output by applying vectors calculated from hidden state activations using the nnsight library. This method manipulates cognitive styles, like depressive rumination, by contrasting them against a healthy thinking baseline. The repository provides a complete pipeline to create, train, and evaluate custom cognitive steering vectors.",
+      url: "https://github.com/ChuloIva/COT-steering"
     }
   ];
 
