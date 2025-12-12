@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Mail, Github, Linkedin, Twitter, GraduationCap, BookOpen } from "lucide-react";
+import TableOfContents from "@/components/TableOfContents";
 
 const Index = () => {
   const research = [
@@ -120,6 +121,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background font-roboto">
+      <TableOfContents />
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         {/* Header */}
         <header className="text-center mb-16 animate-fade-in">
@@ -157,7 +159,7 @@ const Index = () => {
         </section>
 
         {/* About Section */}
-        <section className="mb-16 animate-fade-in">
+        <section id="about-me" className="mb-16 animate-fade-in">
           <Card className="bg-gradient-card border-border shadow-card">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold mb-6 text-primary">About Me</h3>
@@ -183,7 +185,7 @@ const Index = () => {
         </section>
 
         {/* Published Research Section */}
-        <section className="mb-16 animate-fade-in">
+        <section id="published-research" className="mb-16 animate-fade-in">
           <h3 className="text-2xl font-semibold mb-8 text-primary">Published Research</h3>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {publishedResearch.map((item, index) => (
@@ -222,7 +224,7 @@ const Index = () => {
         </section>
 
         {/* Research Projects Section */}
-        <section className="mb-16 animate-fade-in">
+        <section id="research-projects" className="mb-16 animate-fade-in">
           <h3 className="text-2xl font-semibold mb-8 text-primary">Research Projects</h3>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {research.map((item, index) => (
@@ -250,7 +252,7 @@ const Index = () => {
         </section>
 
         {/* Dev Projects Grid */}
-        <section className="mb-16 animate-fade-in">
+        <section id="dev-projects" className="mb-16 animate-fade-in">
           <h3 className="text-2xl font-semibold mb-8 text-primary">Dev Projects</h3>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {devProjects.map((project, index) => (
@@ -278,7 +280,7 @@ const Index = () => {
         </section>
 
         {/* Skills Section */}
-        <section className="mb-16 animate-fade-in">
+        <section id="skills" className="mb-16 animate-fade-in">
           <Card className="bg-gradient-card border-border shadow-card">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold mb-6 text-primary">Skills</h3>
@@ -294,7 +296,7 @@ const Index = () => {
         </section>
 
         {/* Certifications Section */}
-        <section className="mb-16 animate-fade-in">
+        <section id="certifications" className="mb-16 animate-fade-in">
           <Card className="bg-gradient-card border-border shadow-card">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold mb-6 text-primary">Certifications</h3>
@@ -323,7 +325,7 @@ const Index = () => {
         </section>
 
         {/* Education & Experience */}
-        <div className="grid gap-6 md:grid-cols-2 mb-16 animate-fade-in">
+        <div id="education-experience" className="grid gap-6 md:grid-cols-2 mb-16 animate-fade-in">
           <Card className="bg-gradient-card border-border shadow-card">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold mb-6 text-primary">Education</h3>
