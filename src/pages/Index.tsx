@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Mail, Github, Linkedin, Twitter, GraduationCap, BookOpen } from "lucide-react";
 import TableOfContents from "@/components/TableOfContents";
+import profilePhoto from "@/assets/images/profile.png";
 
 const Index = () => {
   const research = [
@@ -123,40 +124,47 @@ const Index = () => {
     <div className="min-h-screen bg-background font-roboto">
       <TableOfContents />
       <div className="container mx-auto px-4 py-12 max-w-6xl">
-        {/* Header */}
-        <header className="text-center mb-16 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent animate-glow">
-            Ivan Chulo
-          </h1>
-          <h2 className="text-xl md:text-2xl text-muted-foreground font-light">
-            Cognitive Scientist & AI Researcher
-          </h2>
-        </header>
+        {/* Hero Section with Photo */}
+        <header className="mb-16 animate-fade-in">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
+            {/* Profile Photo */}
+            <div className="flex-shrink-0">
+              <div className="rounded-full overflow-hidden shadow-glow">
+                <img
+                  src={profilePhoto}
+                  alt="Ivan Chulo"
+                  className="h-32 w-32 md:h-48 md:w-48 object-cover"
+                />
+              </div>
+            </div>
 
-        {/* Contact Section */}
-        <section className="mb-16 animate-fade-in">
-          <Card className="bg-gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-primary">Contact</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Name, Title, and Contact */}
+            <div className="flex-1 text-center md:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 bg-gradient-primary bg-clip-text text-transparent animate-glow">
+                Ivan Chulo
+              </h1>
+              <h2 className="text-lg md:text-xl lg:text-2xl text-muted-foreground font-light mb-6">
+                Cognitive Scientist & AI Researcher
+              </h2>
+
+              {/* Contact Icons */}
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
                 {socialLinks.map((link, index) => (
                   <a
                     key={index}
                     href={link.href}
                     target={link.href.startsWith('mailto') ? '_self' : '_blank'}
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors duration-200 group"
+                    aria-label={link.label}
+                    className="text-primary hover:text-accent transition-all duration-200 hover:scale-110"
                   >
-                    <link.icon className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-200" />
-                    <span className="text-foreground group-hover:text-primary transition-colors duration-200">
-                      {link.label}
-                    </span>
+                    <link.icon className="h-6 w-6" />
                   </a>
                 ))}
               </div>
-            </CardContent>
-          </Card>
-        </section>
+            </div>
+          </div>
+        </header>
 
         {/* About Section */}
         <section id="about-me" className="mb-16 animate-fade-in">
@@ -168,7 +176,7 @@ const Index = () => {
                   Hey, I'm Ivan. I'm a cognitive scientist and AI researcher based in Zagreb, Croatia, with an MA in Applied Cognitive Science. My work centers on figuring out how AI systems "think"—especially when it comes to psychology, mental health, and making these models actually useful for people.
                 </p>
                 <p>
-                  Most of my research sits at the intersection of machine learning and cognitive science, using mechanistic interpretability to explore model internals. I've investigated how models respond to psychological interventions based on self-determination theory, exploring whether they follow the same patterns as humans. In another project, I decomposed Theory of Mind abilities and analyzed what processing happens underneath using linear probes trained on model activations. This work was <a href="https://aaai.org/conference/aaai/aaai-26/workshop-program-list/#ws07" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors underline">presented at AAAI</a>.
+                  Most of my research sits at the intersection of machine learning and cognitive science, using mechanistic interpretability to explore model internals. I've investigated how models respond to psychological interventions based on self-determination theory, exploring whether they follow the same patterns as humans. In another project, I decomposed Theory of Mind abilities and analyzed what processing happens underneath using linear probes trained on model activations. This work was <a href="https://aaai.org/conference/aaai/aaai-26/workshop-program-list/#ws07" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors underline">accepted at AAAI conference workshop</a>.
                 </p>
                 <p>
                   On the applied side, I build things: therapeutic AI systems that analyze therapy sessions in real-time, adapted SAEs for discovering cognitive markers of depression, and multi-agent systems for psychological assessment. I also enjoy weirder side projects—like a Bluesky bot that simulates polarized political debates, or automated Twitter bots that tap into trending topics.
