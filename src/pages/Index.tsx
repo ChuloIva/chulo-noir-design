@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Mail, Github, Linkedin, Twitter, GraduationCap } from "lucide-react";
+import { ExternalLink, Mail, Github, Linkedin, Twitter, GraduationCap, BookOpen } from "lucide-react";
 
 const Index = () => {
   const research = [
@@ -114,7 +114,8 @@ const Index = () => {
     { icon: Linkedin, href: "https://www.linkedin.com/in/ivan-chulo-23573b171/", label: "linkedin.com/in/ivan-chulo" },
     { icon: Github, href: "https://github.com/ChuloIva", label: "github.com/ChuloIva" },
     { icon: Twitter, href: "https://twitter.com/koalacrown", label: "@koalacrown" },
-    { icon: GraduationCap, href: "https://scholar.google.com/citations?user=PIiQ5rQAAAAJ&hl=en", label: "Google Scholar" }
+    { icon: GraduationCap, href: "https://scholar.google.com/citations?user=PIiQ5rQAAAAJ&hl=en", label: "Google Scholar" },
+    { icon: BookOpen, href: "https://parislo.substack.com/", label: "Substack" }
   ];
 
   return (
