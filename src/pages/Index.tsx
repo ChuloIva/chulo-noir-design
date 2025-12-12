@@ -1,14 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { ExternalLink, Mail, Github, Linkedin, Twitter, GraduationCap } from "lucide-react";
 
 const Index = () => {
   const research = [
-    {
-      title: "Representation Engineering - Mental Health Interventions",
-      description: "Explores representation engineering for mental health insights using fine-tuned Mistral 7B on depressive datasets. Features contrastive PCA vector extraction, 30+ cognitive pairs testing, and LLM-as-judge evaluation. Discovers social connection as most effective intervention, validating intrinsic vs extrinsic motivation theories.",
-      url: "https://github.com/ChuloIva/Representation-engineering---mental-health-experiments"
-    },
     {
       title: "HypotheSAEs - Cognitive Pattern Discovery in Depression",
       description: "A specialized neural network framework that automatically discovers interpretable cognitive markers of depression from Reddit text data. Trains Sparse Autoencoders on depression posts vs control subreddits, applies Lasso regression for predictive neuron identification, then uses LLM interpretation for human-readable cognitive pattern hypotheses. Features interactive dashboard and complete reproducible pipeline.",
@@ -18,10 +13,30 @@ const Index = () => {
       title: "COT-Steering - Cognitive Pattern Manipulation in Thinking LLMs",
       description: "An adaptation of existing framework for emotional and cognitive contexts. It steers an LLM's thinking output by applying vectors calculated from hidden state activations using the nnsight library. This method manipulates cognitive styles, like depressive rumination, by contrasting them against a healthy thinking baseline. The repository provides a complete pipeline to create, train, and evaluate custom cognitive steering vectors.",
       url: "https://github.com/ChuloIva/COT-steering"
+    },
+    {
+      title: "NNsight Selfie - Model-Agnostic Neural Network Interpretation",
+      description: "A model-agnostic implementation of the selfie library using NNsight for neural network interpretation. Extends the original selfie approach to work with any transformer architecture (GPT, BERT, T5, LLaMA) through NNsight's universal interface. Features activation extraction and injection, concept arithmetic, flexible interpretation prompts with placeholders, batch processing, and analysis tools for activation similarity and vector projections. Supports automatic device detection (MPS, CUDA, CPU).",
+      url: "https://github.com/ChuloIva/NNsight_Selfie"
     }
   ];
 
-  const projects = [
+  const publishedResearch = [
+    {
+      title: "Decomposing Theory of Mind: How Emotional Processing Mediates ToM Abilities in LLMs",
+      description: "Recent work shows activation steering substantially improves language models' Theory of Mind (ToM), yet the mechanisms remain unclear. This research decomposes ToM in LLMs by comparing steered versus baseline models using linear probes trained on 45 cognitive actions. Applied Contrastive Activation Addition (CAA) steering to Gemma-3-4B on 1,000 BigToM scenarios, finding improved belief attribution (32.5% to 46.7% accuracy) is mediated by emotional processing: emotion perception (+2.23), emotion valuing (+2.20), while suppressing analytical processes: questioning (-0.78), convergent thinking (-1.59).",
+      githubUrl: "https://github.com/ChuloIva/Cogni_map",
+      paperUrl: "https://arxiv.org/abs/2511.15895"
+    },
+    {
+      title: "Digital Shadows of Mental States: Exploring the Behaviour of Large Language Models with Representation Engineering",
+      description: "Investigates how representation engineering techniques can model psychological states in LLMs. Fine-tuned Mistral-7B on depression-related datasets, then applied representation engineering to implement intervention vectors based on self-determination theory. Compared intrinsic motivations (personal growth, community feeling) versus extrinsic motivations (wealth, status, appearance) as psychological interventions. Key finding: intrinsic goal interventions showed greater positive trends on the model's reported mood, with community engagement ranking among the highest-performing interventions.",
+      githubUrl: "https://github.com/ChuloIva/Representation-engineering---mental-health-experiments",
+      paperUrl: "https://dabar.srce.hr/islandora/object/ffzg:13822"
+    }
+  ];
+
+  const devProjects = [
     {
       title: "MyMind - Therapeutic AI Application",
       description: "A full-stack AI-powered therapeutic assistant that analyzes audio therapy sessions in real time. Features transcription with Whisper, speaker separation with Pyannote, GPT-4.1-nano for sentiment analysis, UMAP/t-SNE visualizations, LangChain RAG, and CBT/schema therapy modules. Built with FastAPI, PostgreSQL, and React.",
@@ -98,7 +113,8 @@ const Index = () => {
     { icon: Mail, href: "mailto:chuloiva.work@gmail.com", label: "chuloiva.work@gmail.com" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/ivan-chulo-23573b171/", label: "linkedin.com/in/ivan-chulo" },
     { icon: Github, href: "https://github.com/ChuloIva", label: "github.com/ChuloIva" },
-    { icon: Twitter, href: "https://twitter.com/koalacrown", label: "@koalacrown" }
+    { icon: Twitter, href: "https://twitter.com/koalacrown", label: "@koalacrown" },
+    { icon: GraduationCap, href: "https://scholar.google.com/citations?user=PIiQ5rQAAAAJ&hl=en", label: "Google Scholar" }
   ];
 
   return (
@@ -159,9 +175,48 @@ const Index = () => {
           </Card>
         </section>
 
-        {/* Research Section */}
+        {/* Published Research Section */}
         <section className="mb-16 animate-fade-in">
-          <h3 className="text-2xl font-semibold mb-8 text-primary">Research</h3>
+          <h3 className="text-2xl font-semibold mb-8 text-primary">Published Research</h3>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {publishedResearch.map((item, index) => (
+              <Card key={index} className="bg-gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300 group animate-scale-in">
+                <CardContent className="p-6">
+                  <h4 className="text-lg font-semibold mb-3 text-primary group-hover:text-accent transition-colors duration-200">
+                    {item.title}
+                  </h4>
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                    {item.description}
+                  </p>
+                  <div className="flex flex-col gap-2">
+                    <a
+                      href={item.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-200 font-medium"
+                    >
+                      View on GitHub
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                    <a
+                      href={item.paperUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-200 font-medium"
+                    >
+                      Read Paper
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Research Projects Section */}
+        <section className="mb-16 animate-fade-in">
+          <h3 className="text-2xl font-semibold mb-8 text-primary">Research Projects</h3>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {research.map((item, index) => (
               <Card key={index} className="bg-gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300 group animate-scale-in">
@@ -187,11 +242,11 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Projects Grid */}
+        {/* Dev Projects Grid */}
         <section className="mb-16 animate-fade-in">
-          <h3 className="text-2xl font-semibold mb-8 text-primary">Projects</h3>
+          <h3 className="text-2xl font-semibold mb-8 text-primary">Dev Projects</h3>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, index) => (
+            {devProjects.map((project, index) => (
               <Card key={index} className="bg-gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300 group animate-scale-in">
                 <CardContent className="p-6">
                   <h4 className="text-lg font-semibold mb-3 text-primary group-hover:text-accent transition-colors duration-200">
