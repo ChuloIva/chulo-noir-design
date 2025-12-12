@@ -162,13 +162,19 @@ const Index = () => {
               <h3 className="text-2xl font-semibold mb-6 text-primary">About Me</h3>
               <div className="space-y-4 text-foreground leading-relaxed">
                 <p>
-                  As a Cognitive Scientist and AI researcher pursuing an MA in Applied Cognitive Science at the University of Zagreb, I specialize in developing intelligent systems that bridge machine learning, psychology, and mental health applications. My research focuses on the intersection of representation engineering, therapeutic AI, and human-centered design, with particular expertise in large language model development, evaluation, and safety.
+                  Hey, I'm Ivan. I'm a cognitive scientist and AI researcher based in Zagreb, Croatia, with an MA in Applied Cognitive Science. My work centers on figuring out how AI systems "think"—especially when it comes to psychology, mental health, and making these models actually useful for people.
                 </p>
                 <p>
-                  My technical expertise spans the full AI development lifecycle, from fine-tuning specialized models like Mistral 7B for therapeutic applications to architecting multi-agent systems using frameworks like CrewAI and LangChain. I have extensive experience in LLM evaluation methodologies, including automated assessment systems, prompt engineering, and red teaming approaches for AI safety and alignment. My work in representation engineering has demonstrated how contrastive PCA techniques can extract meaningful psychological vectors, validating intrinsic motivation theories through computational models.
+                  Most of my research sits at the intersection of machine learning and cognitive science, using mechanistic interpretability to explore model internals. I've investigated how models respond to psychological interventions based on self-determination theory, exploring whether they follow the same patterns as humans. In another project, I decomposed Theory of Mind abilities and analyzed what processing happens underneath using linear probes trained on model activations. This work was <a href="https://aaai.org/conference/aaai/aaai-26/workshop-program-list/#ws07" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors underline">presented at AAAI</a>.
                 </p>
                 <p>
-                  My professional experience includes leading AI innovation at Aurelia Global Wellness, where I engineered feedback systems powered by large language models and designed multi-LLM agent synchronization architectures. I combine technical depth in areas like time series forecasting, sentiment analysis, and data visualization with a strong foundation in psychological research methodologies, OSINT techniques, and ethical AI development practices.
+                  On the applied side, I build things: therapeutic AI systems that analyze therapy sessions in real-time, adapted SAEs for discovering cognitive markers of depression, and multi-agent systems for psychological assessment. I also enjoy weirder side projects—like a Bluesky bot that simulates polarized political debates, or automated Twitter bots that tap into trending topics.
+                </p>
+                <p>
+                  Day-to-day, I work across the full stack—fine-tuning models, prompt engineering, evaluation pipelines, LangChain/CrewAI agent architectures, and data visualization. I'm deeply interested in AI safety and alignment, so red teaming, evaluation methodologies, and understanding what's happening under the hood are all things I like to occupy my mental space with.
+                </p>
+                <p>
+                  I'm a research student affiliate at the <a href="https://pals-research-lab.github.io/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors underline">PALS lab</a> at Johns Hopkins University.
                 </p>
               </div>
             </CardContent>
