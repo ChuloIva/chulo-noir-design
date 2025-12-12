@@ -140,7 +140,7 @@ const Index = () => {
 
             {/* Name, Title, and Contact */}
             <div className="flex-1 text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 bg-gradient-primary bg-clip-text text-transparent animate-glow">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 bg-gradient-primary bg-clip-text text-transparent">
                 Ivan Chulo
               </h1>
               <h2 className="text-lg md:text-xl lg:text-2xl text-muted-foreground font-light mb-6">
