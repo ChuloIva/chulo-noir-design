@@ -173,16 +173,16 @@ const Index = () => {
               <h3 className="text-2xl font-semibold mb-6 text-primary">About Me</h3>
               <div className="space-y-4 text-foreground leading-relaxed">
                 <p>
-                  Hey, I'm Ivan. I'm a cognitive scientist and AI researcher based in Zagreb, Croatia, with an MA in Applied Cognitive Science. My work centers on figuring out how AI systems "think"—especially when it comes to psychology, mental health, and making these models actually useful for people.
+                  Hey, I'm Ivan. I'm a cognitive scientist and AI researcher based in Zagreb, Croatia, with an MA in Applied Cognitive Science. My work centers on figuring out how AI systems "think", especially when it comes to psychology, mental health, and making these models actually useful for people.
                 </p>
                 <p>
                   Most of my research sits at the intersection of machine learning and cognitive science, using mechanistic interpretability to explore model internals. I've investigated how models respond to psychological interventions based on self-determination theory, exploring whether they follow the same patterns as humans. In another project, I decomposed Theory of Mind abilities and analyzed what processing happens underneath using linear probes trained on model activations. This work was <a href="https://aaai.org/conference/aaai/aaai-26/workshop-program-list/#ws07" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors underline">accepted at AAAI conference workshop</a>.
                 </p>
                 <p>
-                  On the applied side, I build things: therapeutic AI systems that analyze therapy sessions in real-time, adapted SAEs for discovering cognitive markers of depression, and multi-agent systems for psychological assessment. I also enjoy weirder side projects—like a Bluesky bot that simulates polarized political debates, or automated Twitter bots that tap into trending topics.
+                  On the applied side, I build things: therapeutic LLM-powered systems that analyze therapy sessions, adapted SAEs for discovering cognitive markers of depression, and multi-agent systems for psychological assessment. I also enjoy weirder side projects, like a Bluesky bot that simulates polarized political debates, or automated Twitter bots that tap into trending topics.
                 </p>
                 <p>
-                  Day-to-day, I work across the full stack—fine-tuning models, prompt engineering, evaluation pipelines, LangChain/CrewAI agent architectures, and data visualization. I'm deeply interested in AI safety and alignment, so red teaming, evaluation methodologies, and understanding what's happening under the hood are all things I like to occupy my mental space with.
+                  Day-to-day, I work across the full stack, including fine-tuning models, prompt engineering, evaluation pipelines, LangChain/CrewAI agent architectures, and classic ML and data engineering. I'm deeply interested in AI safety and alignment, so red teaming, evaluation methodologies, and understanding what's happening under the hood are all things I like to occupy my mental space with.
                 </p>
                 <p>
                   I'm a research student affiliate at the <a href="https://pals-research-lab.github.io/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors underline">PALS lab</a> at Johns Hopkins University.
@@ -340,7 +340,7 @@ const Index = () => {
               <div className="space-y-2">
                 <h4 className="font-semibold text-foreground">University of Zagreb (FER, FFZG), Croatia</h4>
                 <p className="text-muted-foreground">MA in Applied Cognitive Science</p>
-                <p className="text-sm text-muted-foreground italic">2023 - Present</p>
+                <p className="text-sm text-muted-foreground italic">2023 - 2025</p>
               </div>
             </CardContent>
           </Card>
